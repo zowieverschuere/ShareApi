@@ -34,10 +34,10 @@ namespace ShareApi
             services.AddControllers();
             services.AddDbContext<ShareContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("ShareContext")));
-           /* services.AddDbContext<ShareContext>(options =>
-            {
+            /* services.AddDbContext<ShareContext>(options =>
+             {
                  options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
-            });*/
+             });*/
 
             services.AddScoped<ShareDataInitializer>();
             services.AddScoped<IShareRepository, ShareRepository>();
